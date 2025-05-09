@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'pricedown';
+    src: url(/fonts/pricedown.otf);
+}
+
+*{ 
+    padding:0; 
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'pricedown';
+}
+
+html , body {
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+:root {
+    --bg--color:white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+main {
+    width: 100vw;
+    height: 200vh;
+    .landing {
+        width: 100vw;
+        height: 100svh;
+        position: relative;
+        overflow: hidden;
+        .clouds,.buildings,.character,.svg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .clouds {
+            z-index: 1;
+        }
+        .buildings {
+            z-index: 2;
+        }
+        .vi-text {
+            z-index: 3;
+            color: white;
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            line-height: 1.5rem;
+        }
+        .character {
+            z-index: 4;
+            width: auto;
+            height: 500px;
+            left: 50%;
+            bottom: -220px;
+            transform: scale(1.5) translateX(-25%);
+        }
+        .svg {
+            background: #000;
+            z-index: 4;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .ps5 {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 6;
+        }
+        .rockstar {
+            width: 200px;
+            height: auto;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            z-index: 6;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: white;
+            .lines {
+                width: 100px;
+                height: 100%;
+                position: relative;
+                .line {
+                    width: 100%;
+                    height: 8px;
+                    background: white;
+                    margin-block: 2px;
+                    &:nth-child(2) {
+                        width: 70%;
+                    }
+                    &:nth-child(3) {
+                        width: 40%;
+                    }
+                }
+            }
+            .logo {
+                height: 100%;
+                width: fit-content;
+                h1 {
+                    line-height: 1rem;
+                }
+            }
+        }
+        .bottom-grad {
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            z-index: 5;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(180deg, #00000000, #00000000 ,#000000af ,#000);
+        }
+    }
+}
+
+@media (max-width:500px) {
+    main {
+        .landing {
+            .character {
+                transform: translate(-50%,5%) scale(2) !important;
+            }
+            .vi-text {
+                transform: translate(-50%,-70%);
+            }
+        }
+
+    }
+}

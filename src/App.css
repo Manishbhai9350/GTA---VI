@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "pricedown";
+  src: url(/fonts/pricedown.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "pricedown";
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --bg--color:white;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+main {
+  width: 100vw;
+  height: 200vh;
+}
+main .landing {
+  width: 100vw;
+  height: 100svh;
+  position: relative;
+  overflow: hidden;
+}
+main .landing .clouds, main .landing .buildings, main .landing .character, main .landing .svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main .landing .clouds {
+  z-index: 1;
+}
+main .landing .buildings {
+  z-index: 2;
+}
+main .landing .vi-text {
+  z-index: 3;
+  color: white;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.5rem;
+}
+main .landing .character {
+  z-index: 4;
+  width: auto;
+  height: 500px;
+  left: 50%;
+  bottom: -220px;
+  transform: scale(1.5) translateX(-25%);
+}
+main .landing .svg {
+  background: #000;
+  z-index: 4;
+}
+main .landing .svg svg {
+  width: 100%;
+  height: 100%;
+}
+main .landing .ps5 {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+}
+main .landing .rockstar {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+}
+main .landing .rockstar .lines {
+  width: 100px;
+  height: 100%;
+  position: relative;
+}
+main .landing .rockstar .lines .line {
+  width: 100%;
+  height: 8px;
+  background: white;
+  margin-block: 2px;
+}
+main .landing .rockstar .lines .line:nth-child(2) {
+  width: 70%;
+}
+main .landing .rockstar .lines .line:nth-child(3) {
+  width: 40%;
+}
+main .landing .rockstar .logo {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .landing .rockstar .logo h1 {
+  line-height: 1rem;
+}
+main .landing .bottom-grad {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6862745098), #000);
+}
+
+@media (max-width: 500px) {
+  main .landing .character {
+    transform: translate(-50%, 5%) scale(2) !important;
+  }
+  main .landing .vi-text {
+    transform: translate(-50%, -70%);
+  }
+}/*# sourceMappingURL=App.css.map */
